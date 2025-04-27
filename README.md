@@ -68,14 +68,6 @@ data = data[data['销售金额']!=0]
 ```
 
 3. 辅助指标生成
-• 配送时效计算：
-
-  ```python
-  # 创建配送天数字段
-  data['delivery_days'] = (data['delivery_date'] - data['order_date']).dt.days
-  ```
-• 月度销售分析：
-
   ```python
   # 提取月份
   data['月份'] = data['销售时间'].apply(lambda x:x.month)
